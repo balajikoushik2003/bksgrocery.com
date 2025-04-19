@@ -260,7 +260,7 @@ section{
     color: var(--orange);
     text-decoration: underline;
 }
-@media(min-width:451) and (max-width:748px){
+@media (min-width:451) and (max-width:748px){
    
 .features .box-container {
     display: grid;
@@ -279,7 +279,12 @@ section{
     }
 }
 @media(min-width:749px)and (max-width:4000px) {
-    
+    .features .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    align-items: center;
+}
     #menu-btn{
         display: inline-block;
     }
