@@ -262,6 +262,12 @@ section{
 }
 @media(min-width:451) and (max-width:748px){
    
+.features .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    align-items: center;
+}
     html {
         font-size: 55%;
       }
@@ -455,7 +461,7 @@ section{
         <a href="#categories">Categories🈚</a>
       </nav>
       <div class="icons">
-         <div class="fas fa-bars" id="menu-btn">☰<br>Men</div>
+         <div class="fas fa-bars" id="menu-btn">☰<br>Menu</div>
         <div class="fas fa-search" id="search-btn">🔎</div>
         <div class="fas fa-shopping-cart" id="cart-btn">🛒</div>
         <div class="fas fa-user" id="login-btn">log</div>
