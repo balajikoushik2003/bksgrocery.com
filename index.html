@@ -156,7 +156,7 @@ section{
   margin: 1rem 0;
 }
 .header .shopping-cart .box img {
-  width:32rem;
+
   height: 10rem;
 }
 .heading{
@@ -262,7 +262,14 @@ section{
     text-decoration: underline;
 }
 @media (min-width:451) and (max-width:748px){
-   
+
+.features .box-container .box img{
+width:32rem;
+  display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    align-items: center;
+}
 .features .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -281,6 +288,11 @@ section{
     }
 }
 @media(min-width:749px)and (max-width:4000px) {
+  
+.features .box-container .box img{
+width:32rem;
+}
+  
     .features .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
