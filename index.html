@@ -18,9 +18,6 @@
     />
     <style>
 :root {
-  element.style {
-    width:none;
-  }
   --orange: hwb(28 2% 0%);
   --black: hwb(0 2% 93%);
   --light-color: #000607;
@@ -65,24 +62,21 @@ section{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5% 4%; 
+  padding: 0.5% 4%; /* Reduced padding for a slimmer navbar */
   background: #b4b2b0;
   box-shadow: var(--box-shadow);
 }
 
 
 .header .logo {
-  font-size: 3rem; 
+  font-size: 3rem; /* Reduced font size for logo */
   font-weight: bolder;
   color: var(--white);
 }
-element.style {
-    width: none;
-}
+
 .header .navbar a {
-  font-size: 1.5rem; 
-  padding-left: 4rem; 
-  padding-right:3px;
+  font-size: 1.5rem; /* Reduced font size for navbar links */
+  padding-left: 4rem; /* Adjusted padding to ensure links don't appear too spread out */
   margin: 0 1rem;
   color: var(--black);
 }
@@ -161,15 +155,7 @@ element.style {
   position: relative;
   margin: 1rem 0;
 }
-placeholder {
-    color: white;
-    opacity: 0.8;
-  }
-  input[type="email"], input[type="password"] {
-    color: white;
-  }
 .header .shopping-cart .box img {
-
   height: 10rem;
 }
 .heading{
@@ -274,22 +260,8 @@ placeholder {
     color: var(--orange);
     text-decoration: underline;
 }
-@media (min-width:451) and (max-width:748px){
-
-.features .box-container .box img{
-width:32rem;
-  display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 1.5rem;
-    align-items: center;
-}
-.features .box-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 1.5rem;
-    width :32rem
-    align-items: center;
-}
+@media(max-width:991px){
+   
     html {
         font-size: 55%;
       }
@@ -300,18 +272,8 @@ width:32rem;
         padding: 2rem;
     }
 }
-@media(min-width:749px)and (max-width:4000px) {
-  
-.features .box-container .box img{
-width:32rem;
-}
-  
-    .features .box-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 1.5rem;
-    align-items: center;
-}
+@media(max-width:768px){
+    
     #menu-btn{
         display: inline-block;
     }
@@ -350,7 +312,6 @@ width:32rem;
       }
 }
 .home{
-       margin-top: 202px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -387,7 +348,6 @@ width:32rem;
   padding: .3rem  2rem;
   background: hsl(0, 0%, 97%);
   outline: var(--outline);
-  height:500px;
   outline-offset: -1rem;
   text-align: center;
   box-shadow: var(--box-shadow);
@@ -397,9 +357,8 @@ width:32rem;
   outline-offset: 0rem;
 }
 .features .box-container .box img{
-  margin: 4rem -20px;
-   width:32rem;
-  height: 300px;
+  margin: 0rem 0;
+  height: auto;
 }
 .features .box-container .box h3{
   font-size: 2.5rem;
@@ -428,7 +387,6 @@ width:32rem;
   outline: var(--outline-hover);
 }
 .products  .product-slider .box img{
-  width: 20rem;
   height: 20rem;
 }
 .products  .product-slider .box h3{
@@ -488,18 +446,18 @@ width:32rem;
   <body>
     <header class="header">
       <a href="" class="logo"><i class="fas fa-shopping-basket"></i> Balaji's grocery basket⭐</a>
+<nav class="navbar">
+  <a href="#home">home🏠</a>
+  <a href="#features">features🔽</a>
+  <a href="#products">products🔽</a>
+  <a href="#categories">categories🈚</a>
+  <a href="https://www.takeitsmart.in/" target="_blank">company🌐</a>
+</nav>
 
-      <nav class="navbar">
-        <a href="#home">Home🏠</a>
-        <a href="#features">Features🔽</a>
-        <a href="#products">Products🔽</a>
-        <a href="#categories">Categories🈚</a>
-      </nav>
       <div class="icons">
-         <div class="fas fa-bars" id="menu-btn">☰<br></div>
+        <div class="fas fa-bars" id="menu-btn"></div>
         <div class="fas fa-search" id="search-btn">🔎</div>
         <div class="fas fa-shopping-cart" id="cart-btn">🛒</div>
-      
         <div class="fas fa-user" id="login-btn">log</div>
        
       </div>
@@ -539,32 +497,14 @@ width:32rem;
         <div class="navtotal">total: 400.01/-</div>
         <a href="static/1.png" class="btn">BILL</a>
       </div>
- 
-  <form action="" class="login-form"
-        style="background-color: rgba(0, 0, 50, 0.7); padding: 30px; border-radius: 10px; 
-               width: 300px; text-align: center; color: white; box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);">
-               
-    <h3 style="margin-bottom: 20px; font-size: 24px; color: white;">Login</h3>
-    
-    <input type="email" placeholder="your email" class="box"
-           style="width: 100%; padding: 10px; margin: 10px 0; border: none; 
-                  border-radius: 20px; background-color: rgba(255, 255, 255, 0.1); 
-                  color: white; outline: none; ::placeholder { color: white; }" />
-
-    <input type="password" placeholder="your password" class="box"
-           style="width: 100%; padding: 10px; margin: 10px 0; border: none; 
-                  border-radius: 20px; background-color: rgba(255, 255, 255, 0.1); 
-                  color: white; outline: none; ::placeholder { color: white; }" />
-
-    <p style="font-size: 12px; color: white;">forget your password <a href="#" style="color: #1e90ff;">click here</a></p>
-    <p style="font-size: 12px; color: white;">don't have an account <a href="#" style="color: #1e90ff;">create now</a></p>
-
-    <input type="submit" value="login now" class="btn"
-           style="width: 100%; padding: 10px; margin-top: 15px; border: none;
-                  border-radius: 20px; background-color: white; color: black; 
-                  cursor: pointer; font-weight: bold;" />
-  </form>
-
+      <form action="" class="login-form">
+        <h3>Login Now</h3>
+        <input type="email" placeholder="your email" class="box" />
+        <input type="password" placeholder="your password" class="box" />
+        <p>forget your password <a href="#">click here</a></p>
+        <p>don't have an account <a href="#">create now</a></p>
+        <input type="submit" value="login now" class="btn" />
+      </form>
     </header>
     <section class="home" id="home">
       <div class="content">
@@ -605,7 +545,7 @@ width:32rem;
           <a href="#" class="btn">read more</a>
         </div>
         <div class="box">
-          <img src="https://t3.ftcdn.net/jpg/06/16/18/18/240_F_616181843_l404nbV07vMiXDZ1IhWiqZRDpetpuigu.jpg" alt="" style="width: 32rem" />
+          <img src="https://t3.ftcdn.net/jpg/06/16/18/18/240_F_616181843_l404nbV07vMiXDZ1IhWiqZRDpetpuigu.jpg" alt="" style="width: 37rem" />
           <h3>easy payments</h3>
           <p>
             YOU CAN PAY SECURLY BECAUSE It is a real-time payment system that helps in instant and quick transfer of funds between two bank accounts. The transfer of funds is done through a single mobile application.
@@ -934,10 +874,10 @@ width:32rem;
     color: hwb(0 2% 93%);
   }
   
-p {
-    color: hwb(0 99% 0%);
-    line-height: 95.6px;
-}
+  p {
+    color:  hwb(0 2% 93%);
+    line-height: 1.6;
+  }
 </style>
 
 <script>
@@ -948,72 +888,11 @@ p {
   document.querySelector('.about-me-container').appendChild(moreInfoButton);
 
   moreInfoButton.addEventListener('click', function() {
-      const moreInfo = document.createElement('p');
+      const moreInfo = document.createElement('p'):
+      alert('login sucessful')
       moreInfo.textContent = 'Here is some more information about me...';
       document.querySelector('.about-me-container').appendChild(moreInfo);
       moreInfoButton.style.display = 'none';
-   
-  // Helper to detect "mobile" width
-  const isMobile = () => window.matchMedia('(max-width: 450px)').matches;
-
-  // Grab your elements once
-  const searchForm   = document.querySelector('.search-form');
-  const shoppingCart = document.querySelector('.shopping-cart');
-  const loginForm    = document.querySelector('.login-form');
-  const menu         = document.querySelector('.navbar');
-
-  // Utility to close all panels
-  const closeAll = () => {
-    searchForm.classList.remove('active');
-    shoppingCart.classList.remove('active');
-    loginForm.classList.remove('active');
-    menu.classList.remove('active');
-  };
-
-  document.querySelector('#search-btn').onclick = () => {
-    closeAll();
-    if (isMobile()) {
-      searchForm.classList.toggle('active');
-    }
-  };
-
-  document.querySelector('#cart-btn').onclick = () => {
-    closeAll();
-    if (isMobile()) {
-      shoppingCart.classList.toggle('active');
-      console.log("shopping cart clicked");
-    }
-  };
-
-  document.querySelector('#login-btn').onclick = () => {
-    closeAll();
-    if (isMobile()) {
-      loginForm.classList.toggle('active');
-    }
-  };
-
-  document.querySelector('#menu-btn').onclick = () => {
-    closeAll();
-    if (isMobile()) {
-      menu.classList.toggle('active');
-    }
-  };
-
-  // Also close everything when the user scrolls (regardless of width)
-  window.onscroll = closeAll;
-
-  // Your slider init can remain untouched
-  var swiper = new Swiper(".product-slider", {
-    loop: true,
-    spaceBetween: 20,
-    breakpoints: {
-      0:   { slidesPerView: 1 },
-      750: { slidesPerView: 2 },
-      1024:{ slidesPerView: 3 }
-    },
-  });
-</script>
-
   });
 });
 
